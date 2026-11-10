@@ -21,11 +21,16 @@ console.log(hp);
  const PI = 3.14159;
 
  //PI = 3;
-// (Feilen betyr at får ikke lov til å endre en variabel som er laget med const)
+// (*Feilen betyr at får ikke lov til å endre en variabel som er laget med const)
+
 // Oppgave 4 (middels)
 // Et spill på Steam koster 200 kr før moms. Lag const MOMS = 0.25 og let pris = 200.
 // Skriv ut prisen med moms.
 // Forventet: Pris med moms: 250 kr
+const MOMS = 0.25;
+let pris = 200;
+
+console.log("Pris med moms:", pris * (1 + MOMS), "kr");
 
 
 // Oppgave 5 (avansert)
@@ -33,7 +38,11 @@ console.log(hp);
 // maks antall spillere på serveren (16), antall liv igjen (3),
 // høyden på Fløya (671), temperaturen i Tromsø nå (-4).
 // Forventet: ingenting i konsollen
-
+const maksSpillere = 16;
+let livIgjen = 3;
+const hoydeFloya = 671;
+let temperatur = -4;
+// ~begrunn valgene mine: jeg bruker Const for fasre verdier og let for verdier som kan endres~ 
 
 // ---------------- TEKST OG TALL ----------------
 // Tekst (string) står i anførselstegn: "Kari". Tall (number) står uten: 17.
@@ -45,12 +54,13 @@ console.log(hp);
 // Skriv ut typeof hp og typeof firstname.
 // Forventet: number
 //            string
-
+console.log(typeof hp);
+console.log(typeof firstname);
 
 // Oppgave 7 (grunnleggende)
 // Bruk backticks og ${} til å skrive ut en setning med firstname og hp.
 // Forventet: Ola har 70 hp
-
+console.log(`${firstname} har ${hp} hp`);
 
 // Oppgave 8 (middels)
 // Skriv ut 5 + 5, deretter "5" + 5, deretter Number("5") + 5.
@@ -58,7 +68,10 @@ console.log(hp);
 // Forventet: 10
 //            55
 //            10
-
+console.log (5+5)
+console.log("5"+5)
+console.log(Number("5")+5)
+//forklaring for hvorfor (55) ikke (10) fordi jeg skrev 5 mellom "" så alt mellom "" blir tekst f.eks hvis jeg skriver console.log("du"+5) jeg skal få :du5 
 
 // Oppgave 9 (middels)
 // 17 elever skal deles i lag på 4. Bruk / og % .
@@ -67,6 +80,8 @@ console.log(hp);
 // Forventet: 4 lag
 //            1 til overs
 
+console.log(Math.floor( 17 / 4), "lag");
+console.log(17 % 4, "til overs");
 
 // ---------------- VALG MED IF ----------------
 // if kjører koden bare når betingelsen er sann. else kjører ellers.
@@ -77,6 +92,11 @@ console.log(hp);
 // Oppgave 10 (grunnleggende)
 // const temp = -8. Skriv ut "Kuldegrader" hvis temp er under 0.
 // Forventet: Kuldegrader
+const temp = -8;
+
+if (temp < 0) {
+    console.log("Kuldegrader");
+}
 
 
 // Oppgave 11 (grunnleggende)
